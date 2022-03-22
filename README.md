@@ -1,2 +1,4 @@
 # Solidity-Basics
-Important topics in solidity to learn 
+Important topics
+
+
