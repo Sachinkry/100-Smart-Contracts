@@ -26,3 +26,23 @@ contract FunctionModifier {
     }
 
 }
+
+contract Modifiers {
+    address public owner;
+
+    constructor() {
+        // set the contract deployer as the owner
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "You are not the owner");
+        _;
+    }
+
+    function changeOwner(address _newOwner) public onlyOwner {
+        owner = _newOwner;
+    }
+
+
+}
